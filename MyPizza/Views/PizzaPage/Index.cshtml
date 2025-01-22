@@ -1,0 +1,20 @@
+﻿@model List<Pizza>
+<div class="d-flex flex-row flex-wrap">
+    @foreach (Pizza item in Model)
+    {
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">
+                    @item.Name
+                </div>
+                <p class="card-subtitle">@item.Price</p>
+            </div>
+            <div class="card-body">
+                <img class="card-img" src="@item.ImageUrl" width="50"/>
+                <div class="card text">
+                    <p>@item.Description</p>
+                </div>
+            </div>
+        </div>
+    }
+</div>
