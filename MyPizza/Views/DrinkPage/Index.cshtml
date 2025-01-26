@@ -1,6 +1,6 @@
-﻿@model List<Pizza>
+﻿@model List<Drink>
 <div class="d-flex align-content-around flex-wrap">
-    @foreach (Pizza item in Model)
+    @foreach (Drink item in Model)
     {
         <div class="card" style="width:600px">
             <div class="card-header">
@@ -13,11 +13,10 @@
                 <div class="card text">
                     <p>@item.Description</p>
                 </div>
-                <img class="card-img" src="@item.ImageUrl" height="400"/> 
+                <img class="card-img" src="@item.ImageUrl" height="400" />
             </div>
             <div class="card-footer">
-                <a href="@Url.Action("Ingredients", "PizzaPage", new{Id = item.Id})" class="btn btn-info">See ingredients</a>
-                <a href="@Url.Action("AddToCart", "PizzaPage", new{Id = item.Id})" class="btn btn-success">Add to cart</a>
+                <a href="@Url.Action("AddToCart", "DrinkPage", new{Id = item.Id})" class="btn btn-success">Add to cart</a>
             </div>
         </div>
     }
