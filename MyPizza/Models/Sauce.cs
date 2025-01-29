@@ -8,7 +8,7 @@
         {
             string[] values = csvLine.Split(',');
             Sauce sauce = new Sauce();
-            sauce.Id = Convert.ToInt32(values[0]);
+            sauce.Id = values[0];
             sauce.Name = values[1];
             sauce.Description = values[2];
             sauce.Price = Convert.ToDouble(values[3]);

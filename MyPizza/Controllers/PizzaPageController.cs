@@ -12,7 +12,7 @@ namespace MyPizza.Controllers
             pizzaPage.LoadData(@"D:\MyPizza\pizzas.csv");
             return View(pizzaPage.Pizzas);
         }
-        public IActionResult Ingredients(int id)
+        public IActionResult Ingredients(string id)
         {
             PizzaPage pizzaPage = new PizzaPage();
             pizzaPage.LoadData(@"D:\MyPizza\pizzas.csv");
@@ -27,7 +27,7 @@ namespace MyPizza.Controllers
             }
 
         }
-        public IActionResult AddToCart(int id)
+        public IActionResult AddToCart(string id)
         {
             PizzaPage pizzaPage = new PizzaPage();
             pizzaPage.LoadData(@"D:\MyPizza\pizzas.csv");

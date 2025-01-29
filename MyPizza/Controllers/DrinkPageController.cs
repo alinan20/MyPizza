@@ -11,7 +11,7 @@ namespace MyPizza.Controllers
             drinkPage.LoadData(@"D:\MyPizza\drinks.csv");
             return View(drinkPage.Drinks);
         }
-        public IActionResult AddToCart(int id)
+        public IActionResult AddToCart(string id)
         {
             DrinkPage drinkPage = new DrinkPage();
             drinkPage.LoadData(@"D:\MyPizza\drinks.csv");

@@ -1,15 +1,15 @@
-﻿@model Pizza
+﻿@model Sauce
 <div class="card">
     <div class="card-header">
         <h4 class="card-title text-uppercase">
             @Model.Name
         </h4>
-        <h6 class="card-subtitle">@Model.Price lei</h6>
+        <h6 class="card-subtitle">@Model.Price lei -- @Model.Weight</h6>
     </div>
     <div class="card-body">
         <div class="card text">
-            <p class="fst-italic">@Model.Ingredients</p>
+            <p class ="fst-italic">@Model.Ingredients</p>
         </div>
-        <img class="card-img" src="@Model.ImageUrl"/>
+        <img class="card-img" src="@Model.ImageUrl" />
     </div>
 </div>

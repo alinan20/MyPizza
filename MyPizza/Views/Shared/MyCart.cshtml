@@ -5,13 +5,21 @@
     {
         <div class="card" style="width:400px">
             <div class="card-header">
-                <div class="card-title">
+                <div class="card-title fw-bold">
                     @item.Name
                 </div>
                 <p class="card-subtitle">@item.Price lei</p>
+                <form action="@Url.Action("CalculateSubtotal", "MyCart", new{id = item.Id})" method="post" class="form-inline">
+                    <input type="number" name="quantity" value="1" class="form-control" />
+                    <button type="submit" class="btn btn-secondary">Calculate Subtotal</button>
+                    <p class="fw-bold" style="float:right">Subtotal: @item.Subtotal lei</p>
+                </form>
             </div>
             <div class="card-body">
                 <img class="card-img" src="@item.ImageUrl" />
+            </div>
+            <div class="card-footer">
+                <a href="@Url.Action("DeleteFromCart", "MyCart", new{id = item.Id})" class="btn btn-outline-secondary">Remove</a>
             </div>
         </div>
     }
