@@ -1,5 +1,4 @@
-﻿using System.Drawing;
-
+﻿
 namespace MyPizza.Models
 {
     public class Pizza : Product
@@ -10,12 +9,13 @@ namespace MyPizza.Models
         {
             string[] values = csvLine.Split(',');
             Pizza pizza = new Pizza();
-            pizza.Id= values[0];
-            pizza.Name= values[1];
-            pizza.Description= values[2];
-            pizza.Price= Convert.ToDouble(values[3]);
-            pizza.ImageUrl= values[4];
-            pizza.Ingredients= values[5];
+            pizza.Id = values[0];
+            pizza.Name = values[1];
+            pizza.Description = values[2];
+            pizza.Price = Convert.ToDouble(values[3]);
+            pizza.ImageUrl = values[4];
+            pizza.Ingredients = values[5];
+            pizza.Subtotal = pizza.Price;
             return pizza;
         }
 

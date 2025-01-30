@@ -18,14 +18,14 @@ namespace MyPizza.Controllers
             var chosenDrink = drinkPage.Drinks.Find(item => item.Id == id);
             if (chosenDrink != null)
             {
-                PizzaPageController.ProductsInCart.Add(chosenDrink);
+                MyCartPage.ProductsInCart.Add(chosenDrink);
             }
             return RedirectToAction("ViewMyCart");
 
         }
         public IActionResult ViewMyCart()
         {
-            return View("MyCart", PizzaPageController.ProductsInCart);
+            return View("MyCart", MyCartPage.ProductsInCart);
         }
     }
 }

@@ -15,6 +15,7 @@
             sauce.ImageUrl = values[4];
             sauce.Ingredients = values[5];
             sauce.Weight = values[6];
+            sauce.Subtotal = sauce.Price;
             return sauce;
         }
     }

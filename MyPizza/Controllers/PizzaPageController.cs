@@ -5,7 +5,6 @@ namespace MyPizza.Controllers
 {
     public class PizzaPageController : Controller
     {
-        public static List<Product> ProductsInCart = new List<Product>();
         public IActionResult Index()
         {
             PizzaPage pizzaPage = new PizzaPage();
@@ -34,14 +33,14 @@ namespace MyPizza.Controllers
             var chosenPizza = pizzaPage.Pizzas.Find(item => item.Id == id);
             if (chosenPizza != null)
             {
-                ProductsInCart.Add(chosenPizza);
+                MyCartPage.ProductsInCart.Add(chosenPizza);
             }
             return RedirectToAction("ViewMyCart");
 
         }
         public IActionResult ViewMyCart()
         {
-            return View("MyCart", ProductsInCart);
+            return View("MyCart", MyCartPage.ProductsInCart);
         }
     }
 }

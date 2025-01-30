@@ -7,11 +7,11 @@ namespace MyPizza.Controllers
     {
         public IActionResult DeleteFromCart(string id)
         {
-            var chosenProduct = PizzaPageController.ProductsInCart.Find(item => item.Id == id);
+            var chosenProduct = MyCartPage.ProductsInCart.Find(item => item.Id == id);
             if (chosenProduct != null)
             {
-                PizzaPageController.ProductsInCart.Remove(chosenProduct);
-                return View("MyCart", PizzaPageController.ProductsInCart);
+                MyCartPage.ProductsInCart.Remove(chosenProduct);
+                return View("MyCart", MyCartPage.ProductsInCart);
             }
             else
             {
@@ -22,11 +22,11 @@ namespace MyPizza.Controllers
         [HttpPost]
         public IActionResult CalculateSubtotal(string id, int quantity)
         {
-            var chosenProduct = PizzaPageController.ProductsInCart.Find(item => item.Id == id);
+            var chosenProduct = MyCartPage.ProductsInCart.Find(item => item.Id == id);
             if (chosenProduct != null)
             {
                 chosenProduct.Subtotal = quantity * chosenProduct.Price;
-                return View("MyCart", PizzaPageController.ProductsInCart);
+                return View("MyCart", MyCartPage.ProductsInCart);
             }
             else
             {

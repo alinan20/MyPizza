@@ -13,6 +13,7 @@
             drink.Price = Convert.ToDouble(values[3]);
             drink.ImageUrl = values[4];
             drink.BottleCapacity = values[5];
+            drink.Subtotal = drink.Price;
             return drink;
         }
     }

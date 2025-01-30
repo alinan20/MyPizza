@@ -33,14 +33,14 @@ namespace MyPizza.Controllers
             var chosenSauce = saucePage.Sauces.Find(item => item.Id == id);
             if (chosenSauce != null)
             {
-                PizzaPageController.ProductsInCart.Add(chosenSauce);
+                MyCartPage.ProductsInCart.Add(chosenSauce);
             }
             return RedirectToAction("ViewMyCart");
 
         }
         public IActionResult ViewMyCart()
         {
-            return View("MyCart", PizzaPageController.ProductsInCart);
+            return View("MyCart", MyCartPage.ProductsInCart);
         }
     }
 }
