@@ -34,5 +34,14 @@ namespace MyPizza.Controllers
             }
 
         }
+        public IActionResult Checkout()
+        {
+            return View("CustomerData");
+            
+        }
+        public IActionResult Finish()
+        {
+            return View("SuccessfulOrder");
+        }
     }
 }

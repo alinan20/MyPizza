@@ -3,7 +3,6 @@ namespace MyPizza.Models
 {
     public class Pizza : Product
     {
-        public Size PizzaSize { get; set; }
         public string Ingredients { get; set; }
         public static Pizza CreateObjectFromCsvLine(string csvLine)
         {
@@ -17,13 +16,6 @@ namespace MyPizza.Models
             pizza.Ingredients = values[5];
             pizza.Subtotal = pizza.Price;
             return pizza;
-        }
-
-        public enum Size 
-        { 
-            Small,
-            Large,
-            Party
         }
 
     }

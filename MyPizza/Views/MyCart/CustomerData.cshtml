@@ -1,0 +1,14 @@
+﻿@model Customer
+<form method="post" asp-action="Finish">
+    <label asp-for="@Model.Name" style="color:lightseagreen" class="fw-bold">Full name</label><br>
+    <input type="text" asp-for="@Model.Name" style="width:50%"/><br>
+    <label asp-for="@Model.Address" style="color:lightseagreen" class="fw-bold"></label><br>
+    <input type="text" asp-for="@Model.Address" style="width:50%" /><br>
+    <label asp-for="@Model.PhoneNumber" style="color:lightseagreen" class="fw-bold">Enter your phone number</label><br>
+    <input type="tel" asp-for="@Model.PhoneNumber" style="width:50%" /><br>
+    <label asp-for="@Model.Email" style="color:lightseagreen" class="fw-bold">Enter your email address</label><br>
+    <input type="email" asp-for="@Model.Email" style="width:50%" /><br>
+    <label asp-for="@Model.PaymentOption" class="control-label fw-bold" style="color:lightseagreen">Choose the payment method:</label>
+    <select asp-for="@Model.PaymentOption" asp-items="Html.GetEnumSelectList<Customer.Payment>()" class="form-control" style="width:fit-content"></select><br />
+    <button type="submit" class = "btn btn-success">Finish order</button>
+</form>
