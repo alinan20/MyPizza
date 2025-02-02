@@ -7,13 +7,13 @@
                 <h4 class="card-title text-uppercase">
                     @item.Name
                 </h4>
-                <h6 class="card-subtitle">@item.Price lei</h6>
+                <h6 class="card-subtitle">@item.Price lei -- @item.BottleCapacity</h6>
             </div>
             <div class="card-body">
                 <div class="card text">
                     <p class="fst-italic">@item.Description</p>
                 </div>
-                <img class="card-img" src="@item.ImageUrl" height="400" />
+                <img class="card-img" src="@item.ImageUrl" height="550" />
             </div>
             <div class="card-footer">
                 <a href="@Url.Action("AddToCart", "DrinkPage", new{Id = item.Id})" class="btn btn-success">Add to cart</a>
