@@ -5,9 +5,10 @@ namespace MyPizza.Controllers
 {
     public class MyCartController : Controller
     {
+        public PizzeriaBusiness Pizzeria = new PizzeriaBusiness();
         public IActionResult DeleteFromCart(string id)
         {
-            var chosenProduct = MyCartPage.ProductsInCart.Find(item => item.Id == id);
+            var chosenProduct = Pizzeria.GetProductById(id);
             if (chosenProduct != null)
             {
                 MyCartPage.ProductsInCart.Remove(chosenProduct);
@@ -22,7 +23,7 @@ namespace MyPizza.Controllers
         [HttpPost]
         public IActionResult CalculateSubtotal(string id, int quantity)
         {
-            var chosenProduct = MyCartPage.ProductsInCart.Find(item => item.Id == id);
+            var chosenProduct = Pizzeria.GetProductById(id);
             if (chosenProduct != null)
             {
                 chosenProduct.Subtotal = quantity * chosenProduct.Price;

@@ -5,17 +5,14 @@ namespace MyPizza.Controllers
 {
     public class SaucePageController : Controller
     {
+        public PizzeriaBusiness Pizzeria = new PizzeriaBusiness();
         public IActionResult Index()
         {
-            SaucePage saucePage = new SaucePage();
-            saucePage.LoadData(@"D:\MyPizza\sauces.csv");
-            return View(saucePage.Sauces);
+            return View(Pizzeria.SaucePage.Sauces);
         }
         public IActionResult Ingredients(string id)
         {
-            SaucePage saucePage = new SaucePage();
-            saucePage.LoadData(@"D:\MyPizza\sauces.csv");
-            var chosenSauce = saucePage.Sauces.Find(item => item.Id == id);
+            var chosenSauce = Pizzeria.GetSauceById(id);
             if (chosenSauce != null)
             {
                 return View(chosenSauce);
@@ -28,9 +25,7 @@ namespace MyPizza.Controllers
         }
         public IActionResult AddToCart(string id)
         {
-            SaucePage saucePage = new SaucePage();
-            saucePage.LoadData(@"D:\MyPizza\sauces.csv");
-            var chosenSauce = saucePage.Sauces.Find(item => item.Id == id);
+            var chosenSauce = Pizzeria.GetSauceById(id);
             if (chosenSauce != null)
             {
                 MyCartPage.ProductsInCart.Add(chosenSauce);

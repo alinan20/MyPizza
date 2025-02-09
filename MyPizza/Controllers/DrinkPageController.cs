@@ -5,17 +5,14 @@ namespace MyPizza.Controllers
 {
     public class DrinkPageController : Controller
     {
+        public PizzeriaBusiness Pizzeria = new PizzeriaBusiness();
         public IActionResult Index()
         {
-            DrinkPage drinkPage = new DrinkPage();
-            drinkPage.LoadData(@"D:\MyPizza\drinks.csv");
-            return View(drinkPage.Drinks);
+            return View(Pizzeria.DrinkPage.Drinks);
         }
         public IActionResult AddToCart(string id)
         {
-            DrinkPage drinkPage = new DrinkPage();
-            drinkPage.LoadData(@"D:\MyPizza\drinks.csv");
-            var chosenDrink = drinkPage.Drinks.Find(item => item.Id == id);
+            var chosenDrink = Pizzeria.GetDrinkById(id);
             if (chosenDrink != null)
             {
                 MyCartPage.ProductsInCart.Add(chosenDrink);

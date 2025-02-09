@@ -10,7 +10,7 @@
                 </div>
                 <p class="card-subtitle">@item.Price lei</p>
                 <form action="@Url.Action("CalculateSubtotal", "MyCart", new{id = item.Id})" method="post" class="form-inline">
-                    <input type="number" name="quantity" class="form-control" />
+                    <input type="number" name="quantity" placeholder="Quantity" class="form-control" />
                     <button type="submit" class="btn btn-secondary">Calculate Subtotal</button>
                     <p class="fw-bold" style="float:right">Subtotal: @item.Subtotal lei</p>
                 </form>
