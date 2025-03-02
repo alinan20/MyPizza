@@ -10,7 +10,7 @@ namespace TestMyPizza
         public void GetPizzaInfo()
         {
             PizzeriaBusiness pizzeriaBusiness = new PizzeriaBusiness();
-            var pizza = pizzeriaBusiness.GetPizzaById("4");
+            var pizza = pizzeriaBusiness.GetPizzaById(4);
             Assert.AreEqual(45, pizza.Price);
         }
         [TestMethod]
@@ -18,9 +18,10 @@ namespace TestMyPizza
         {
             PizzeriaBusiness pizzeriaBusiness = new PizzeriaBusiness();
             MyCartController cartController = new MyCartController();
-            var drink = pizzeriaBusiness.GetDrinkById("d");
+            var drink = pizzeriaBusiness.GetDrinkById(4);
             MyCartPage.ProductsInCart.Add(drink);
-            cartController.CalculateSubtotal("d",6);
+            MyCartPage.GetNewIds();
+            cartController.CalculateSubtotal(1,6);
             Assert.AreEqual(30, drink.Subtotal);
             MyCartPage.ProductsInCart.Clear();
         }
@@ -29,12 +30,13 @@ namespace TestMyPizza
         {
             PizzeriaBusiness pizzeriaBusiness = new PizzeriaBusiness();
             MyCartController cartController = new MyCartController();
-            var pizza = pizzeriaBusiness.GetPizzaById("6");
-            var sauce = pizzeriaBusiness.GetSauceById("i");
+            var pizza = pizzeriaBusiness.GetPizzaById(6);
+            var sauce = pizzeriaBusiness.GetSauceById(1);
             MyCartPage.ProductsInCart.Add(pizza);
             MyCartPage.ProductsInCart.Add(sauce);
-            cartController.CalculateSubtotal("6", 2);
-            cartController.CalculateSubtotal("i", 3);
+            MyCartPage.GetNewIds();
+            cartController.CalculateSubtotal(1, 2);
+            cartController.CalculateSubtotal(2, 3);
             Assert.AreEqual(107, MyCartPage.Total);
             MyCartPage.ProductsInCart.Clear();
         }
@@ -43,8 +45,8 @@ namespace TestMyPizza
         {
             PizzeriaBusiness pizzeriaBusiness = new PizzeriaBusiness();
             MyCartController cartController = new MyCartController();
-            var pizza = pizzeriaBusiness.GetPizzaById("5");
-            var drink = pizzeriaBusiness.GetDrinkById("e");
+            var pizza = pizzeriaBusiness.GetPizzaById(5);
+            var drink = pizzeriaBusiness.GetDrinkById(5);
             MyCartPage.ProductsInCart.Add(pizza);
             MyCartPage.ProductsInCart.Add(drink);
             MyCartPage.ProductsInCart.Remove(drink);
