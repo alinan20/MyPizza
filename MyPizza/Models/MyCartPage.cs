@@ -13,5 +13,12 @@
             }
             return total;
         }
+        public static void GetNewIds()
+        {
+            for (int i = 0; i < ProductsInCart.Count; i++)
+            {
+                ProductsInCart[i].CartId = i+1;
+            }
+        }
     }
 }

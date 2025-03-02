@@ -14,22 +14,22 @@
             DrinkPage.LoadData(@"D:\MyPizza\drinks.csv");
             SaucePage.LoadData(@"D:\MyPizza\sauces.csv");
         }
-        public Pizza GetPizzaById(string id)
+        public Pizza GetPizzaById(int id)
         {
             return PizzaPage.Pizzas.Find(item => item.Id == id);
         }
-        public Drink GetDrinkById(string id)
+        public Drink GetDrinkById(int id)
         {
             return DrinkPage.Drinks.Find(item => item.Id == id);
 
         }
-        public Sauce GetSauceById(string id)
+        public Sauce GetSauceById(int id)
         {
             return SaucePage.Sauces.Find(item => item.Id == id);
         }
-        public Product GetProductById(string id)
+        public Product GetProductById(int id)
         {
-            return MyCartPage.ProductsInCart.Find(item => item.Id == id);
+            return MyCartPage.ProductsInCart.Find(item => item.CartId == id);
         }
 
     }

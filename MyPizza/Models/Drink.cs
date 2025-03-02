@@ -7,7 +7,7 @@
         {
             string[] values = csvLine.Split(',');
             Drink drink = new Drink();
-            drink.Id = values[0];
+            drink.Id = Convert.ToInt32(values[0]);
             drink.Name = values[1];
             drink.Description = values[2];
             drink.Price = Convert.ToDouble(values[3]);

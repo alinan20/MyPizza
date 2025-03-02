@@ -10,13 +10,14 @@ namespace MyPizza.Controllers
         {
             return View(Pizzeria.DrinkPage.Drinks);
         }
-        public IActionResult AddToCart(string id)
+        public IActionResult AddToCart(int id)
         {
             var chosenDrink = Pizzeria.GetDrinkById(id);
             if (chosenDrink != null)
             {
                 MyCartPage.ProductsInCart.Add(chosenDrink);
             }
+            MyCartPage.GetNewIds();
             return RedirectToAction("ViewMyCart");
 
         }

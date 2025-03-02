@@ -1,9 +1,9 @@
 Id,Name,Description,Price,ImageUrl,BottleCapacity
-a,Coca-Cola,PET. Carbonated soft drink. Contains caffeine,15,https://www.rik.ro/media/webp_image/catalog/product/cache/46d3733cd9dafe65809e3d380172fe5c/1/6/1603-cola.webp,2L
-b,7UP,PET. Lemon-lime flavored carbonated soft drink,15,https://cdn-media.carrefour.ro/media/catalog/product/cache/b8d1b6d249a72cf17aaedcba7bc307bc/1/0/10003469.webp,2L
-c,Fanta,PET. Orange flavored carbonated soft drink,15,https://www.rik.ro/media/webp_image/catalog/product/cache/46d3733cd9dafe65809e3d380172fe5c/2/1/2164-fanta-2l.webp,2L
-d,Coca-Cola,Can. Carbonated soft drink. Contains caffeine,5,https://s13emagst.akamaized.net/products/68767/68766209/images/res_8bee0872f0a0830213fe02ad8cddf35d.png?width=720&height=720&hash=B3C41C173A5349FF3502E01A15BE83B3,0.33L
-e,Fanta,Can. Orange flavored carbonated soft drink,5,https://m.media-amazon.com/images/I/61EMsb5lGLL.jpg,0.33L
-f,Prigat,PET. Non-carbonated drink with strawberry and banana juice,16,https://www.koshermarket.com.mx/cdn/shop/products/Prigatstrawberry.jpg?v=1634086999,1.5L
-g,Prigat,PET. Non-carbonated drink with orange juice,17,https://www.marketgradimex.ro/wp-content/uploads/2018/09/3_prigat_porto_1.75.jpg,1.75L
-h,Prigat,Glass bottle. Non-carbonated drink with kiwi juice,9,https://elitemarket.ro/public/storage/images/bautura-racoritoare-prigat-nectar-cu-35-suc-de-kiwi-025l-8858172096542_1587826807.jpg,0.25L
+1,Coca-Cola,PET. Carbonated soft drink. Contains caffeine,15,https://www.rik.ro/media/webp_image/catalog/product/cache/46d3733cd9dafe65809e3d380172fe5c/1/6/1603-cola.webp,2L
+2,7UP,PET. Lemon-lime flavored carbonated soft drink,15,https://cdn-media.carrefour.ro/media/catalog/product/cache/b8d1b6d249a72cf17aaedcba7bc307bc/1/0/10003469.webp,2L
+3,Fanta,PET. Orange flavored carbonated soft drink,15,https://www.rik.ro/media/webp_image/catalog/product/cache/46d3733cd9dafe65809e3d380172fe5c/2/1/2164-fanta-2l.webp,2L
+4,Coca-Cola,Can. Carbonated soft drink. Contains caffeine,5,https://s13emagst.akamaized.net/products/68767/68766209/images/res_8bee0872f0a0830213fe02ad8cddf35d.png?width=720&height=720&hash=B3C41C173A5349FF3502E01A15BE83B3,0.33L
+5,Fanta,Can. Orange flavored carbonated soft drink,5,https://m.media-amazon.com/images/I/61EMsb5lGLL.jpg,0.33L
+6,Prigat,PET. Non-carbonated drink with strawberry and banana juice,16,https://www.koshermarket.com.mx/cdn/shop/products/Prigatstrawberry.jpg?v=1634086999,1.5L
+7,Prigat,PET. Non-carbonated drink with orange juice,17,https://www.marketgradimex.ro/wp-content/uploads/2018/09/3_prigat_porto_1.75.jpg,1.75L
+8,Prigat,Glass bottle. Non-carbonated drink with kiwi juice,9,https://elitemarket.ro/public/storage/images/bautura-racoritoare-prigat-nectar-cu-35-suc-de-kiwi-025l-8858172096542_1587826807.jpg,0.25L

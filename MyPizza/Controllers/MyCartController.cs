@@ -6,7 +6,7 @@ namespace MyPizza.Controllers
     public class MyCartController : Controller
     {
         public PizzeriaBusiness Pizzeria = new PizzeriaBusiness();
-        public IActionResult DeleteFromCart(string id)
+        public IActionResult DeleteFromCart(int id)
         {
             var chosenProduct = Pizzeria.GetProductById(id);
             if (chosenProduct != null)
@@ -21,7 +21,7 @@ namespace MyPizza.Controllers
         }
 
         [HttpPost]
-        public IActionResult CalculateSubtotal(string id, int quantity)
+        public IActionResult CalculateSubtotal(int id, int quantity)
         {
             var chosenProduct = Pizzeria.GetProductById(id);
             if (chosenProduct != null)
@@ -42,6 +42,7 @@ namespace MyPizza.Controllers
         }
         public IActionResult Finish()
         {
+            MyCartPage.ProductsInCart.Clear();
             return View("SuccessfulOrder");
         }
     }

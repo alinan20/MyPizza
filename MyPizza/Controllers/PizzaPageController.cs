@@ -11,7 +11,7 @@ namespace MyPizza.Controllers
         {
             return View(Pizzeria.PizzaPage.Pizzas);
         }
-        public IActionResult Ingredients(string id)
+        public IActionResult Ingredients(int id)
         {
             var chosenPizza = Pizzeria.GetPizzaById(id);
             if (chosenPizza != null)
@@ -24,13 +24,14 @@ namespace MyPizza.Controllers
             }
 
         }
-        public IActionResult AddToCart(string id)
+        public IActionResult AddToCart(int id)
         {
             var chosenPizza = Pizzeria.GetPizzaById(id);
             if (chosenPizza != null)
             {
                 MyCartPage.ProductsInCart.Add(chosenPizza);
             }
+            MyCartPage.GetNewIds();
             return RedirectToAction("ViewMyCart");
 
         }
